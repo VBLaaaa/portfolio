@@ -1,0 +1,271 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio | 山田逢央</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        /* カラーパレット (青と白を基調とした清潔感のあるデザイン) */
+        :root {
+            --primary-color: #3498db; /* メインカラー (青) */
+            --secondary-color: #2980b9; /* アクセントカラー (濃い青) */
+            --background-light: #ffffff; /* 背景色 (白) */
+            --background-dark: #f4f7f6; /* セクション背景色 (薄いグレー) */
+            --text-color: #333333; /* テキスト色 */
+            --shadow-light: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        /* リセットと基本設定 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--text-color);
+            background-color: var(--background-dark);
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* ヘッダー */
+        header {
+            background-color: var(--background-light);
+            box-shadow: var(--shadow-light);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        /* メインコンテンツ共通 */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2em;
+            font-weight: 700;
+            margin-bottom: 50px;
+            color: var(--secondary-color);
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary-color);
+            margin: 10px auto 0;
+            border-radius: 5px;
+        }
+
+        /* 1. 自己紹介セクション */
+        #intro {
+            background-color: var(--background-light);
+            text-align: center;
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+
+        .profile-icon {
+            font-size: 4em;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        #intro h1 {
+            font-size: 3em;
+            margin-bottom: 5px;
+            color: var(--text-color);
+        }
+
+        #intro p {
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 40px;
+        }
+        
+        .divider {
+            width: 100px;
+            height: 2px;
+            background-color: var(--primary-color);
+            margin: 30px auto;
+            opacity: 0.5;
+        }
+
+        /* 2. ガクチカセクション */
+        #gaku-chika {
+            background-color: var(--background-dark);
+        }
+
+        .gaku-chika-content {
+            background-color: var(--background-light);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: var(--shadow-light);
+            border-left: 5px solid var(--primary-color);
+        }
+        
+        .gaku-chika-content h3 {
+            font-size: 1.5em;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .gaku-chika-content h3 i {
+            margin-right: 10px;
+        }
+
+        .gaku-chika-text p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        .gaku-chika-highlight {
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 25px;
+            font-weight: 600;
+            color: var(--secondary-color);
+        }
+
+        /* 3. フッター */
+        footer {
+            background-color: var(--secondary-color);
+            color: #ffffff;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.9em;
+        }
+
+        /* レスポンシブ対応 */
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 1.5em;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+            
+            .section-title {
+                font-size: 1.8em;
+                margin-bottom: 30px;
+            }
+            
+            #intro h1 {
+                font-size: 2.5em;
+            }
+            
+            #intro p {
+                font-size: 1em;
+            }
+
+            .gaku-chika-content {
+                padding: 30px 20px;
+            }
+            
+            .gaku-chika-content h3 {
+                font-size: 1.3em;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <span class="logo">My Portfolio</span>
+        </div>
+    </header>
+
+    <main>
+        <section id="intro">
+            <div class="container">
+                <i class="fa-solid fa-user-tie profile-icon"></i>
+                <h1>山田 逢央</h1>
+                <p>日本大学 理工学部 情報科学科 (仮)</label></p>
+                <div class="divider"></div>
+                <p>
+                    情報科学を専攻し、Web技術とシステム開発に情熱を注いでいます。<br>
+                    理論と実践を結びつけ、社会に貢献できる価値あるサービス創造を目指します。
+                </p>
+            </div>
+        </section>
+        
+        <section id="gaku-chika">
+            <div class="container">
+                <h2 class="section-title">学生時代に力を入れたこと</h2>
+                
+                <div class="gaku-chika-content">
+                    <h3><i class="fa-solid fa-theater-masks"></i> 演出と主演の両立：多角的な視点と共感を伴うコミュニケーション</h3>
+                    <div class="gaku-chika-text">
+                        <p>
+                            私は高校３年次の文化祭で、劇の**主演と演出を兼任**しました。
+                            役作りの追求と、全体を客観的に見る演出家の役割の両立に苦労しましたが、
+                            演者の視点を活かし、**具体的な改善点や共感を伴うフィードバックを徹底**しました。
+                        </p>
+                        <p>
+                            例えば、あるシーンで演者が緊張から動きが硬くなっていた際、
+                            単に「もっとリラックスして」と言うのではなく、「〇〇という心情を出すためには、
+                            むしろ舞台袖で深呼吸してから一歩踏み出す動作を意識してみよう」といった、
+                            **彼らの視点に立った具体的な行動指針**を提示しました。
+                        </p>
+                        <p>
+                            その結果、チームの信頼を得て作品の完成度を高め、公演は大成功を収めました。
+                        </p>
+                        <div class="gaku-chika-highlight">
+                            <p>
+                                この経験から、**多角的な分析力**と、相手の立場に寄り添った**的確なコミュニケーション**の重要性を学びました。
+                                この能力で、状況を俯瞰し、チームを巻き込みながら目標達成に貢献します。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
